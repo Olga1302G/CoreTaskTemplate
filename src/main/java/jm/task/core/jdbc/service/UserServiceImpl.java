@@ -12,7 +12,7 @@ public class UserServiceImpl extends UserDaoHibernateImpl implements UserService
     private Connection connection = getConnection();
     public void createUsersTable() throws SQLException {
        // PreparedStatement preparedStatement = null;
-        String sql = "CREATE TABLE IF NOT EXISTS userTable ("+("ID long auto_increment primary key,"+
+        String sql = "CREATE TABLE IF NOT EXISTS userTable ("+("ID bigint auto_increment primary key,"+
                 " NAME varchar (30) not null, "+
                 "LASTNAME varchar (30) not null,"+
                 "AGE MEDIUMINT not null)");
