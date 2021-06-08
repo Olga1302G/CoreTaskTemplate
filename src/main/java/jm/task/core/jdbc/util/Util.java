@@ -1,11 +1,24 @@
 package jm.task.core.jdbc.util;
 
+import jm.task.core.jdbc.model.User;
+import org.hibernate.HibernateException;
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+
+import org.hibernate.cfg.Configuration;
+import org.hibernate.cfg.Environment;
+
+
+import javax.imageio.spi.ServiceRegistry;
+import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Properties;
 
 public class Util {
-    //private static final String DB_DRIVER = "org.h2.Driver";
     private static final String DB_URL = "jdbc:mysql://localhost:3306/mysql";
     private static final String DB_USERNAME = "root";
     private static final String DB_PASSWORD = "12345root-";
