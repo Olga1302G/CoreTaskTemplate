@@ -1,14 +1,14 @@
 package jm.task.core.jdbc.dao;
 
 import jm.task.core.jdbc.model.User;
-
+import jm.task.core.jdbc.util.Util;
 import java.util.List;
 import java.sql.*;
 import java.util.ArrayList;
 
 
 public class UserDaoJDBCImpl implements UserDao {
-    private Connection connection = getConnection();
+    private Connection connection = Util.getConnection();
     public void createUsersTable() throws SQLException {
        // PreparedStatement preparedStatement = null;
         String sql = "CREATE TABLE IF NOT EXISTS userTable ("+("ID bigint auto_increment primary key,"+
