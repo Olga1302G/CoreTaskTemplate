@@ -8,9 +8,9 @@ public class Util {
     //private static final String DB_DRIVER = "org.h2.Driver";
     private static final String DB_URL = "jdbc:mysql://localhost:3306/mysql";
     private static final String DB_USERNAME = "root";
-    private static final String DB_PASSWORD = "12345root-";
+    private static final String DB_PASSWORD = "root";
 
-    public Connection getConnection() {
+    public static Connection getConnection() {
         Connection connection = null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
